@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let item of items">
+    <h3>{{item.name}}</h3>
+    <p>gender: {{item.gender}}</p>
+    <p>about: {{item.about}}</p>
+    <p>balance: {{item.balance}}</p>
+    <p>age: {{item.age}}</p>
+    <p>eyeColor: {{item.eyeColor}}</p>
+    <p>company: {{item.company}}</p>
+    <p>email: {{item.email}}</p>
+    <p>phone: {{item.phone}}</p>
+    <p>address: {{item.address}}</p>
+    <p>registered: {{item.registered}}</p>
+    <p>friends:</p>
+    <ul>
+      <li *ngFor="let friend of item.friends">
+        <p>{{friend.name}}</p>
+      </li>
+    </ul>
+    <p>greeting: {{item.greeting}}</p>
+    <p>favoriteFruit: {{item.favoriteFruit}}</p>
+    <img src={{item.picture}}/>
+  </li>
+</ul>
