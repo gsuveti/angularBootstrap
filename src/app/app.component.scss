@@ -1,0 +1,28 @@
+$margin-small:15px;
+$margin-regular:2*$margin-small;
+
+.custom-image{
+  padding: 0;
+  img{
+    width: 100%;
+  }
+}
+
+.friends-list{
+  margin-top: $margin-small;
+
+}
+.details-text{
+  margin-top: $margin-regular;
+
+}
+
+.special-list-item:not(:last-child){
+
+  .line{
+
+    border:2px solid #cccccc;
+    margin-top: $margin-small;
+    margin-bottom: $margin-small;
+  }
+}

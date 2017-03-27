@@ -1,26 +1,69 @@
-<h1>{{title}}</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My social Platform</a>
+      <div class="navbar-toggle navbar-right">
+        <span class="glyphicon glyphicon-menu-hamburger "></span>
 
-<ul>
-  <li *ngFor="let item of items">
-    <h3>{{item.name}}</h3>
-    <p>gender: {{item.gender}}</p>
-    <p>about: {{item.about}}</p>
-    <p>balance: {{item.balance}}</p>
-    <p>age: {{item.age}}</p>
-    <p>eyeColor: {{item.eyeColor}}</p>
-    <p>company: {{item.company}}</p>
-    <p>email: {{item.email}}</p>
-    <p>phone: {{item.phone}}</p>
-    <p>address: {{item.address}}</p>
-    <p>registered: {{item.registered}}</p>
-    <p>friends:</p>
-    <ul>
-      <li *ngFor="let friend of item.friends">
-        <p>{{friend.name}}</p>
-      </li>
-    </ul>
-    <p>greeting: {{item.greeting}}</p>
-    <p>favoriteFruit: {{item.favoriteFruit}}</p>
-    <img src={{item.picture}}/>
-  </li>
-</ul>
+      </div>
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div *ngFor="let item of items" class="special-list-item">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-lg-2 custom-image">
+      <img src={{item.picture}}/>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-lg-10">
+
+      <h4 class="media-heading">{{item.name}}</h4>
+      <p>{{item.about}}</p>
+      <div class="row details-text">
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-user"></span> {{item.gender}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-euro"></span> {{item.balance}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-scale"></span> {{item.age}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-eye-open"></span> {{item.eyeColor}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-cloud"></span> {{item.company}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-phone"></span> {{item.phone}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-flag"></span> {{item.address}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-envelope"></span> {{item.email}}</p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <p><span class="glyphicon glyphicon-check"></span> {{item.registered}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="list-group friends-list">
+      <div class="list-group-item disabled"><strong>Friends</strong></div>
+      <div class="list-group-item" *ngFor="let friend of item.friends">
+        {{friend.name}}
+      </div>
+    </div>
+    <div class="well success">{{item.greeting}}</div>
+
+    <div class="line row"></div>
+
+
+  </div>
+</div>
