@@ -1,28 +1,92 @@
-$margin-small:15px;
-$margin-regular:2*$margin-small;
+$margin-small: 15px;
+$margin-regular: 2*$margin-small;
 
-.custom-image{
-  padding: 0;
-  img{
-    width: 100%;
+@mixin line-color($color)
+{
+  border-color:$color;
+}
+.custom-jumbotron {
+  height: 700px;
+  background-image: url("https://demo.themeisle.com/zerif-lite/wp-content/themes/zerif-lite/images/bg.jpg");
+  position: relative;
+
+  .watermark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: .3;
+  }
+  .content {
+
+    text-align: center;
+    position: relative;
+    top: 30%;
+
+    .big-text {
+      color: #ffffff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+    }
+
   }
 }
 
-.friends-list{
-  margin-top: $margin-small;
+.circle{
+  border: 10px solid #CCCCCC;
+  border-radius: 50%;
+  width: 150px;
+  height:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  transition: .5s;
 
-}
-.details-text{
-  margin-top: $margin-regular;
-
-}
-
-.special-list-item:not(:last-child){
-
-  .line{
-
-    border:2px solid #cccccc;
-    margin-top: $margin-small;
-    margin-bottom: $margin-small;
+  .glyphicon{
+    font-size: 2em;
   }
+  &:hover{
+    &.red{
+      @include line-color(#e74c3c)
+    }
+
+    &.green{
+      @include line-color(#2ecc71)
+    }
+
+    &.blue{
+      @include line-color(#2980b9)
+    }
+    &.yellow{
+      @include line-color(#f1c40f)
+    }
+
+
+  }
+}
+.line{
+  border:1px solid black;
+  margin:0px 30%;
+  &.red{
+    @include line-color(#e74c3c)
+  }
+
+  &.green{
+    @include line-color(#2ecc71)
+  }
+
+  &.blue{
+    @include line-color(#2980b9)
+  }
+  &.yellow{
+    @include line-color(#f1c40f)
+  }
+
+
+}
+.text{
+  padding: 15px 30px;
 }

@@ -1,69 +1,58 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">My social Platform</a>
-      <div class="navbar-toggle navbar-right">
-        <span class="glyphicon glyphicon-menu-hamburger "></span>
-
-      </div>
+      <a class="navbar-brand" href="#"><img src="assets/logo.jpg" height="35px"/></a>
     </div>
+    <div class="navbar-text navbar-right btn-group">
+      <button class="btn btn-default">Home</button>
+      <button class="btn btn-default">Deplasare</button>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="jumbotron custom-jumbotron">
+  <div class="watermark"></div>
+  <div class="content">
+    <h1 class="big-text">Text Jmecher</h1>
+    <button class="btn btn-success">Home</button>
+    <button class="btn btn-danger">Deplasare</button>
 
 
   </div>
-</nav>
 
-
-<div class="container-fluid">
-  <div *ngFor="let item of items" class="special-list-item">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-lg-2 custom-image">
-      <img src={{item.picture}}/>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-lg-10">
-
-      <h4 class="media-heading">{{item.name}}</h4>
-      <p>{{item.about}}</p>
-      <div class="row details-text">
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-user"></span> {{item.gender}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-euro"></span> {{item.balance}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-scale"></span> {{item.age}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-eye-open"></span> {{item.eyeColor}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-cloud"></span> {{item.company}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-phone"></span> {{item.phone}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-flag"></span> {{item.address}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-envelope"></span> {{item.email}}</p>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <p><span class="glyphicon glyphicon-check"></span> {{item.registered}}</p>
-        </div>
-      </div>
-    </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3 text-center text">
+    <h1><strong>FEATURES</strong></h1>
+    <h5>What makes this single-page WordPress theme unique.</h5>
   </div>
-    <div class="list-group friends-list">
-      <div class="list-group-item disabled"><strong>Friends</strong></div>
-      <div class="list-group-item" *ngFor="let friend of item.friends">
-        {{friend.name}}
-      </div>
-    </div>
-    <div class="well success">{{item.greeting}}</div>
+</div>
 
-    <div class="line row"></div>
-
-
+<div class="row">
+  <div class="col-xs-12 col-md-3">
+    <div class="circle red"><span class="glyphicon glyphicon-apple"></span></div>
+    <h4 class="text-center">PARALLAX EFFECT</h4>
+    <div class="line red"></div>
+    <div class="text-center text">Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.</div>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <div class="circle green"><span class="glyphicon glyphicon-apple"></span></div>
+    <h4 class="text-center">PARALLAX EFFECT</h4>
+    <div class="line green"></div>
+    <div class="text-center text">Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.</div>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <div class="circle blue"><span class="glyphicon glyphicon-apple"></span></div>
+    <h4 class="text-center">PARALLAX EFFECT</h4>
+    <div class="line blue"></div>
+    <div class="text-center text">Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.</div>
+ </div>
+  <div class="col-xs-12 col-md-3">
+    <div class="circle yellow"><span class="glyphicon glyphicon-apple"></span></div>
+    <h4 class="text-center">PARALLAX EFFECT</h4>
+    <div class="line yellow"></div>
+    <div class="text-center text ">Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.</div>
   </div>
 </div>
