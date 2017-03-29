@@ -1,5 +1,25 @@
 $margin-small: 15px;
 $margin-regular: 2*$margin-small;
+@mixin main-background(){
+  background-image: url("https://demo.themeisle.com/zerif-lite/wp-content/themes/zerif-lite/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@mixin position-0(){
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+//@include keyframe(){
+//  0%{
+//    opacity:0;
+//   // margin-left:-
+//  }
+//
+//}
 
 @mixin line-color($color)
 {
@@ -7,15 +27,11 @@ $margin-regular: 2*$margin-small;
 }
 .custom-jumbotron {
   height: 700px;
-  background-image: url("https://demo.themeisle.com/zerif-lite/wp-content/themes/zerif-lite/images/bg.jpg");
   position: relative;
+  @include main-background();
 
   .watermark {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    @include position-0();
     background-color: black;
     opacity: .3;
   }
@@ -89,4 +105,32 @@ $margin-regular: 2*$margin-small;
 }
 .text{
   padding: 15px 30px;
+}
+
+.ribbon-bottom{
+  height:300px;
+  color: white;
+  padding:5% 25%;
+  @include main-background()
+  position:relative;
+
+  .ribbon-watermark{
+    background-color: #2ecc71;
+    opacity: .7;
+    @include position-0();
+  }
+
+  .custom-button{
+
+    background-color: #27ae60;
+    transition: .5s;
+
+
+    &:hover{
+      background-color: #027936;
+      color:white;
+    }
+
+  }
+
 }
