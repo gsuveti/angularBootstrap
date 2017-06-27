@@ -1,11 +1,12 @@
 $margin-small: 15px;
 $margin-regular: 2*$margin-small;
-@mixin main-background(){
+@mixin main-background() {
   background-image: url("https://demo.themeisle.com/zerif-lite/wp-content/themes/zerif-lite/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-@mixin position-0(){
+
+@mixin position-0() {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -13,18 +14,10 @@ $margin-regular: 2*$margin-small;
   right: 0;
 }
 
-//@include keyframe(){
-//  0%{
-//    opacity:0;
-//   // margin-left:-
-//  }
-//
-//}
-
-@mixin line-color($color)
-{
-  border-color:$color;
+@mixin line-color($color) {
+  border-color: $color;
 }
+
 .custom-jumbotron {
   height: 700px;
   position: relative;
@@ -50,85 +43,84 @@ $margin-regular: 2*$margin-small;
   }
 }
 
-.circle{
+.circle {
   border: 10px solid #CCCCCC;
   border-radius: 50%;
   width: 150px;
-  height:150px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:auto;
+  margin: auto;
   transition: .5s;
 
-  .glyphicon{
+  .glyphicon {
     font-size: 2em;
   }
-  &:hover{
-    &.red{
+  &:hover {
+    &.red {
       @include line-color(#e74c3c)
     }
 
-    &.green{
+    &.green {
       @include line-color(#2ecc71)
     }
 
-    &.blue{
+    &.blue {
       @include line-color(#2980b9)
     }
-    &.yellow{
+    &.yellow {
       @include line-color(#f1c40f)
     }
 
-
   }
 }
-.line{
-  border:1px solid black;
-  margin:0px 30%;
-  &.red{
+
+.line {
+  border: 1px solid black;
+  margin: 0px 30%;
+  &.red {
     @include line-color(#e74c3c)
   }
 
-  &.green{
+  &.green {
     @include line-color(#2ecc71)
   }
 
-  &.blue{
+  &.blue {
     @include line-color(#2980b9)
   }
-  &.yellow{
+  &.yellow {
     @include line-color(#f1c40f)
   }
 
-
 }
-.text{
+
+.text {
   padding: 15px 30px;
 }
 
-.ribbon-bottom{
-  height:300px;
+.ribbon-bottom {
+  height: 300px;
   color: white;
-  padding:5% 25%;
-  @include main-background()
-  position:relative;
+  padding: 5% 25%;
+  @include main-background();
+  position: relative;
 
-  .ribbon-watermark{
+  .ribbon-watermark {
     background-color: #2ecc71;
     opacity: .7;
     @include position-0();
   }
 
-  .custom-button{
+  .custom-button {
 
     background-color: #27ae60;
     transition: .5s;
 
-
-    &:hover{
+    &:hover {
       background-color: #027936;
-      color:white;
+      color: white;
     }
 
   }
